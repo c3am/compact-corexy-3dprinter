@@ -52,6 +52,7 @@ Caution! This printer is still in active development and not yet thoroughly test
     - cheap 24V 10A PSU
     - custom CAN BUS board for active heater                (in development)
 
+## BOM
 The BOM is a libreoffice spreadsheet document called BOM.ods.
 I have included links to where i buy the parts. Depending on where you live you might
 need to find another supplier though. The material costs are at roughly 320 Eur and can vary
