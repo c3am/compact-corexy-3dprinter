@@ -2,56 +2,60 @@
 
 ![the printer](images/CAD.png)
 
-Corexy is not only useful because of the low moving mass, but also because of the compact
-and easily enclosable form factor, but all the popular diy printers that use it are kind of
-expensive.
-So I designed a corexy 3d printer that uses v-wheels to make it cheap.
-When built with v-wheels for all the axes, the parts, including the raspberry pi,
-cost around 210Eur. When built with mgn9 linear rails for x and y, it costs around 30 Eur more.
-The build volume is (180mm)^3 but there may be a bigger version (220mm)^3 in the future.
+The [corexy motion system](https://corexy.com/) is not only useful because of its small
+moving mass, but also because of the compact and easily enclosable form factor,
+but all the popular diy printers that use it are kind of expensive.
+So I designed a corexy 3d printer that has most of the common features of a modern enclosed
+machine while trying to keep it affordable.
 
-## design decisions
-- 2020 extrusions
-This printer uses 2020 aluminium v-slot extrusions because they are cheap and versitile.
-They allow you to mount anything to them easilly with T-nuts and can be solidly
-connected to each other using blind joints.
-One downside though is that for a straight connection they need to be cut very precisely at a 90deg angle.
+Caution! This printer is still in active development and not yet thoroughly tested.
 
-- enclosure
-The panels are designed to be lasercut.
-The front, side and top enclosure panels are made from 4mm transparent acrylic.
-The bottom and back panels are made from 5mm hdf(high density fiberboard) or any other 5mm panel.
+The general goals of this project are:
+- good print quality at 20mm^3/s 0.5mm width 0.25mm height
+- able to print PLA, PETG and ABS reliably
+- (180mm)^3 build volume
+- easy to build and maintain
+- as affordable as possible
+- as compact as possible
+- have an exaust/filter system
+- be as quiet as possible
 
-- corexy motion system
-In a corexy motion system the motors do not move which reduces the moving mass.
-This enables higher accelerations as moving mass creates ringing effects which would degrade
-the print quality meaning a higher print speed can be achieved.
-Also, because there is no moving bed, corexy printers can have a very compact enclosure.
+specs:
+- frame
+    - size: 356mm * 356mm * 456mm outer dimensions
+    - made out of 2020 v-slot aluminium extrusions
+    - panels can be lasercut out of 3mm MDF and/or acrylic
+    - easy to assemble 3d printed frame corners
+    - z-motion system integrated in bottom corners and skirts
 
-- v-wheels
-V-wheels are cheaper than linear rails but might not be as durable/reliable in the long run.
-That is why this printer can be built with linear rails for the x and y axes which experience
-the most movement.
+- motion system
+    - xy-motors at the front move for belt tesnioning
+    - 3-point belt driven z-axis, only 1 stepper
+    - 250mm * 8mm linear rods for y- and z-axis
+    - 250mm mgn9h for x-axis
+    - (180mm)^3 build volume
 
-- bed is supported on 4 corners
-This ensures that the bed is moving perpendicular to the xy-plane reliably.
+- toolhead
+    - bondtech extruder gears, 36mm stepper
+    - tz 2.0 bambulab clone hotend
+    - inductive bed probe                                   (in development)
+    - ebb36 toolhead board                                  (in development)
 
-- 1 stepper for z
-This not only saves on stepper motor costs but also enables the use of mainboards
-with only 4 stepper drivers which are cheaper.
+- air management
+    - 80mm air exhaust port (possible to attatch filter)
+    - 12032 radial fan 22mm cpap part cooling               (in development)
+    - active 65W heater                                     (in development)
 
-- minimal toolhead
-because the voron stealthburner toolhead is too big, the mini stealthburner doesn't have
-good enough cooling and the dragonburner requires a seperate (expensive) extruder,
-This printer has it's own toolhead using BMG extruder gears and a bambulab clone hotend.
+- electronics
+    - Klipper running on rpi zero 2 W
+    - mainboard: skr mini e3 v2.0
+    - cheap 24V 10A PSU
+    - custom CAN BUS board for active heater                (in development)
 
-- frame corners
-Aluminium extrusions can twist when tightening down blind joints which can be prevented
-by 3d printed corner pieces which also protect the enclosure panels.
-This makes the build easier and improves portability and durability.
-
-- stationary gantry
-the xy-gantry is stationary as this is more compact than a flying gantry.
+The BOM is a libreoffice spreadsheet document called BOM.ods.
+I have included links to where i buy the parts. Depending on where you live you might
+need to find another supplier though. The material costs are at roughly 320 Eur and can vary
+depending on whether you buy in bulk or just for one printer.
 
 ## CAD software
 This project uses FreeCAD. All the CAD files are in the CAD folder.
