@@ -1,6 +1,6 @@
-# corexy vslot 3d-printer
+# compact corexy 3d-printer
 
-![the printer](images/CAD.png)
+![the printer](images/real-front.png)
 
 The [corexy motion system](https://corexy.com/) is not only useful because of its small
 moving mass, but also because of the compact and easily enclosable form factor,
@@ -58,6 +58,9 @@ need to find another supplier though. The material costs are at roughly 320 Eur 
 depending on whether you buy in bulk or just for one printer.
 
 ## CAD software
+
+![a cad view of the printer](images/CAD.png)
+
 This project uses FreeCAD. All the CAD files are in the CAD folder.
 Currently there are no plugins you need to install to open any of the CAD files.
 There is one main assembly file where all the parts of the printer are integrated.
