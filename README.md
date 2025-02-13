@@ -10,7 +10,7 @@ machine while trying to keep it affordable.
 
 Caution! This printer is still in active development and not yet thoroughly tested.
 
-The general goals of this project are:
+## general goals:
 - good print quality at 20mm^3/s 0.5mm width 0.25mm height
 - able to print PLA, PETG and ABS reliably
 - (180mm)^3 build volume
@@ -20,7 +20,7 @@ The general goals of this project are:
 - have an exaust/filter system
 - be as quiet as possible
 
-specs:
+## specs:
 - frame
     - size: 356mm * 356mm * 456mm outer dimensions
     - made out of 2020 v-slot aluminium extrusions
