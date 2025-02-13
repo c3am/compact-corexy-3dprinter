@@ -1,6 +1,6 @@
 # compact corexy 3d-printer
 
-![the printer](images/real-front.png)
+<img src="images/real-front.png" alt="the printer" width="300"/>
 
 The [corexy motion system](https://corexy.com/) is not only useful because of its small
 moving mass, but also because of the compact and easily enclosable form factor,
@@ -59,7 +59,7 @@ depending on whether you buy in bulk or just for one printer.
 
 ## CAD software
 
-![a cad view of the printer](images/CAD.png)
+<img src="images/CAD.png" alt="a cad view of the printer" width="600"/>
 
 This project uses FreeCAD. All the CAD files are in the CAD folder.
 Currently there are no plugins you need to install to open any of the CAD files.
